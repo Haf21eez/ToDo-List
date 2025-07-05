@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+/* Container */
+.container {
+  background-color: #46cc48;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 800px;
+  border: 2px solid #000; /* Frame-like effect */
+  position: relative;
+}
+
+
+/* Heading */
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #100f0f;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input-section input,
+.input-section select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+
+#priority {
+  width: 100px;
+}
+
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+#addTaskBtn {
+  padding: 14px;
+  font-size: 16px;
+  background-color: black;
+  color: rgb(154, 222, 118);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addTaskBtn:hover {
+  background-color: #14491b;
+  transform: scale(1.02);
+}
+
+
+/* Task List */
+#taskList {
+  list-style: none;
+}
+
+#taskList li {
+  background-color: #6bd553;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition:   0.3s;
+}
+
+#taskList li:hover {
+  background-color: #eef;
+}
+
+.task-done {
+  text-decoration: line-through;
+  color: gray !important;
+  background-color: #a91095;
+}
+
+#taskList li span {
+  flex: 1;
+  cursor: pointer;
+}
+#clearAllBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#clearAllBtn:hover {
+  background-color:#14491b;
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 600px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  #addTaskBtn,
+  #taskInput,
+  #dueDate,
+  #priority {
+    width: 100%;
+  }
+
+  #taskList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #taskList li button {
+    align-self: flex-end;
+  }
+}
+
+
+
